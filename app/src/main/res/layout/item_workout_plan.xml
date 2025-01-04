@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/border">
+
+    <TextView
+        android:id="@+id/textViewWorkoutType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.Nexa.Bold"
+        android:text="Workout Type"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration"
+        style="@style/TextAppearance.Nexa.Regular"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textViewIntensity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.Nexa.Regular"
+        android:text="Intensity"
+        android:textSize="14sp" />
+
+</LinearLayout>

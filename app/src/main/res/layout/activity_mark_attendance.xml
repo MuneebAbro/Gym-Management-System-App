@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/textViewWorkoutPlansHeader"
+        style="@style/TextAppearance.Nexa.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark Attendance"
+        android:layout_marginStart="12dp"
+        android:textSize="32sp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Member: "
+            android:layout_gravity="center"
+            android:textColor="@color/adaptive_black"
+            style="@style/TextAppearance.Nexa.Bold"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerMembers"
+            android:layout_margin="12dp"
+            android:layout_width="150dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:background="@drawable/rounded_bkg"
+            android:layout_height="36dp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+
+    <!-- Button to mark attendance -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btnMarkAttendance"
+        style="@style/CustomButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/priamry_blue"
+        android:elevation="16dp"
+        android:layout_marginTop="16dp"
+        >
+
+        <TextView
+            android:id="@+id/sign_up_text"
+            style="@style/TextAppearance.Nexa.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:padding="12dp"
+            android:text="Mark Present"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAttendance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

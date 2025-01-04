@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bkg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="?attr/actionBarSize">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header"
+            style="@style/TextAppearance.Nexa.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Member"
+            android:layout_marginStart="12dp"
+            android:textSize="32sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <!-- Name Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:layout_marginTop="16dp"
+            android:textColorHint="@color/gray_hint"
+            app:boxStrokeColor="@color/priamry_blue"
+            app:counterTextColor="@color/priamry_blue"
+            app:cursorColor="@color/priamry_blue"
+            app:hintTextColor="@color/priamry_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextAppearance.Nexa.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/edit_text_gray_bkg"
+                android:backgroundTintMode="add"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/priamry_blue"
+                android:inputType="text"
+                android:padding="18dp"
+                android:textColor="@color/adaptive_black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Age Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etAge"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:textColorHint="@color/gray_hint"
+            app:boxStrokeColor="@color/priamry_blue"
+            app:counterTextColor="@color/priamry_blue"
+            app:cursorColor="@color/priamry_blue"
+            app:hintTextColor="@color/priamry_blue"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextAppearance.Nexa.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/edit_text_gray_bkg"
+                android:backgroundTintMode="add"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/priamry_blue"
+                android:inputType="number"
+                android:padding="18dp"
+                android:textColor="@color/adaptive_black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColorHint="@color/gray_hint"
+            app:boxStrokeColor="@color/priamry_blue"
+            app:counterTextColor="@color/priamry_blue"
+            app:cursorColor="@color/priamry_blue"
+            app:hintTextColor="@color/priamry_blue"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etAge">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextAppearance.Nexa.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/edit_text_gray_bkg"
+                android:backgroundTintMode="add"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/priamry_blue"
+                android:inputType="textEmailAddress"
+                android:padding="18dp"
+                android:textColor="@color/adaptive_black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPhone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:textColorHint="@color/gray_hint"
+            app:boxStrokeColor="@color/priamry_blue"
+            app:counterTextColor="@color/priamry_blue"
+            app:cursorColor="@color/priamry_blue"
+            app:hintTextColor="@color/priamry_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etEmail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextAppearance.Nexa.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/edit_text_gray_bkg"
+                android:backgroundTintMode="add"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/priamry_blue"
+                android:inputType="phone"
+                android:padding="18dp"
+                android:textColor="@color/adaptive_black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Membership Type Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etMembershipType"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Membership Type (e.g., Basic, Premium)"
+            android:textColorHint="@color/gray_hint"
+            app:boxStrokeColor="@color/priamry_blue"
+            app:counterTextColor="@color/priamry_blue"
+            app:cursorColor="@color/priamry_blue"
+            app:hintTextColor="@color/priamry_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etPhone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/TextAppearance.Nexa.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/edit_text_gray_bkg"
+                android:backgroundTintMode="add"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/priamry_blue"
+                android:inputType="text"
+                android:padding="18dp"
+                android:textColor="@color/adaptive_black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Save Button -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnSaveMember"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/priamry_blue"
+            android:elevation="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/etMembershipType"
+            app:layout_constraintStart_toStartOf="@+id/etMembershipType"
+            app:layout_constraintTop_toBottomOf="@+id/etMembershipType">
+
+            <TextView
+                android:id="@+id/sign_up_text"
+                style="@style/TextAppearance.Nexa.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:padding="12dp"
+                android:text="Save"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

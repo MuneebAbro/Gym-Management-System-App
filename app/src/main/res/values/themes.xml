@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Gym" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Gym" parent="Theme.Material3.DayNight.NoActionBar">
+
+    <item name="fontFamily">@font/helvetica_regular</item>
+    <item name="android:fontFamily">@font/helvetica_regular</item>
+    <item name="android:buttonStyle">@style/Widget.MaterialComponents.Button</item>
+</style>
+
+<style name="TextAppearance.Nexa.Bold" parent="TextAppearance.AppCompat">
+<item name="android:fontFamily">@font/helvetica_bold</item>
+<item name="android:textStyle">bold</item>
+</style>
+
+
+<style name="TextAppearance.Nexa.Regular" parent="TextAppearance.AppCompat">
+<item name="android:fontFamily">@font/helvetica_regular</item>
+</style>
+
+<style name="TextAppearance.Nexa.Light" parent="TextAppearance.AppCompat">
+<item name="android:fontFamily">@font/helvetica_light</item>
+</style>
+
+<style name="TextAppearance.Nexa.Italic" parent="TextAppearance.AppCompat">
+<item name="android:fontFamily">@font/helvetica_italic</item>
+<item name="android:textStyle">italic</item>
+</style>
+    <style name="CustomButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/rounded_button</item> <!-- Reference your drawable -->
+        <item name="android:textColor">@color/white</item> <!-- Text color -->
+        <item name="android:padding">12dp</item> <!-- Padding -->
+        <item name="android:elevation">16dp</item> <!-- Shadow elevation -->
+        <item name="android:textSize">16sp</item> <!-- Font size -->
+        <item name="android:textStyle">bold</item> <!-- Bold text -->
+        <item name="android:gravity">center</item> <!-- Centered text -->
+    </style>
+</resources>

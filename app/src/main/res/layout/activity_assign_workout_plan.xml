@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bkg"
+    tools:context=".Activities.AssignWorkoutPlan"
+    android:paddingTop="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/header"
+        style="@style/TextAppearance.Nexa.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Workout Plan"
+        android:layout_marginStart="16dp"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilWorkoutType"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Workout Type"
+            android:textColorHint="@color/gray_hint"
+            app:boxStrokeColor="@color/priamry_blue"
+            app:counterTextColor="@color/priamry_blue"
+            app:cursorColor="@color/priamry_blue"
+            app:hintTextColor="@color/priamry_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etWorkoutType"
+                style="@style/TextAppearance.Nexa.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/edit_text_gray_bkg"
+                android:backgroundTintMode="add"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/priamry_blue"
+                android:inputType="text"
+                android:padding="18dp"
+                android:textColor="@color/adaptive_black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDuration"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Duration (in minutes)"
+            android:textColorHint="@color/gray_hint"
+            app:boxStrokeColor="@color/priamry_blue"
+            app:counterTextColor="@color/priamry_blue"
+            app:cursorColor="@color/priamry_blue"
+            app:hintTextColor="@color/priamry_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilWorkoutType">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDuration"
+                style="@style/TextAppearance.Nexa.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/edit_text_gray_bkg"
+                android:backgroundTintMode="add"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/priamry_blue"
+                android:inputType="number"
+                android:padding="18dp"
+                android:textColor="@color/adaptive_black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Intensity Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilIntensity"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColorHint="@color/gray_hint"
+            app:boxStrokeColor="@color/priamry_blue"
+            app:counterTextColor="@color/priamry_blue"
+            app:cursorColor="@color/priamry_blue"
+            app:hintTextColor="@color/priamry_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tilDuration">
+
+            <EditText
+                android:id="@+id/etIntensity"
+                style="@style/TextAppearance.Nexa.Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/edit_text_gray_bkg"
+                android:backgroundTintMode="add"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/priamry_blue"
+                android:hint="Intensity (e.g., Low, Medium, High)"
+                android:padding="18dp"
+                android:textColor="@color/adaptive_black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Save Button -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnSaveWorkout"
+            style="@style/CustomButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/priamry_blue"
+            android:elevation="16dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tilIntensity"
+            app:layout_constraintStart_toStartOf="@+id/tilIntensity"
+            app:layout_constraintTop_toBottomOf="@+id/tilIntensity">
+
+            <TextView
+                android:id="@+id/sign_up_text"
+                style="@style/TextAppearance.Nexa.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:padding="12dp"
+                android:text="Save"
+                android:textColor="@color/white" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
