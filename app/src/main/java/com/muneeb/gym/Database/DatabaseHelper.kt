@@ -213,4 +213,22 @@ class DatabaseHelper(context: Context) :
         cursor.close()
         return totalplans
     }
+
+
+    fun deleteMember(memberId: Int): Boolean {
+        val db = writableDatabase
+        return try {
+            // First delete related records from other tables
+            db.delete("attendance", "member_id = ?", arrayOf(memberId.toString()))
+            db.delete("payments", "member_id = ?", arrayOf(memberId.toString()))
+            db.delete("workout_plans", "member_id = ?", arrayOf(memberId.toString()))
+
+            // Then delete the member
+            val result = db.delete("members", "id = ?", arrayOf(memberId.toString()))
+            result > 0
+        } catch (e: Exception) {
+            false
+        }
+    }
+
 }

@@ -59,12 +59,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val lottieAnimationView = findViewById<LottieAnimationView>(R.id.lottieAnimationView)
 
-        // Ensure the animation is set to loop infinitely
-        lottieAnimationView.setAnimation(R.raw.dumbell)  // Make sure you have the correct animation
-        lottieAnimationView.loop(true)  // Enable infinite loop
-        lottieAnimationView.playAnimation()  // Start the anima
+        val personRemoveCard = findViewById<CardView>(R.id.person_rem)
+        personRemoveCard.setOnClickListener {
+            val intent = Intent(this, DeleteMemberActivity::class.java)
+            startActivity(intent)
+        }
 
         val btnViewWorkoutPlans = findViewById<CardView>(R.id.workoutplancountcard)
         btnViewWorkoutPlans.setOnClickListener {
